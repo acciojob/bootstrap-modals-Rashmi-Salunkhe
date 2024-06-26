@@ -61,7 +61,7 @@
             background-color: grey;
             font-size: 20px;
             border: 1px solid grey;
-			float: right;
+            float: right;
             border-radius: 5px;
             cursor: pointer;
             color: white;
@@ -79,7 +79,7 @@
 </head>
 <body>
 
-    <button id="open-modal" data-bs-toggle="modal" data-bs-target="#newton-modal">Launch Newton Modal</button>
+    <button id="open-modal">Launch Newton Modal</button>
 
     <div class="modal fade" id="newton-modal" tabindex="-1" aria-labelledby="newton-modal-label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -99,5 +99,24 @@
     </div>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Ensure the modal opens when the button is clicked
+        var myModal = new bootstrap.Modal(document.getElementById('newton-modal'), {
+            keyboard: true
+        });
+
+        document.getElementById('open-modal').addEventListener('click', function () {
+            myModal.show();
+        });
+
+        // Ensure the modal closes when the close button is clicked
+        document.querySelector('.btn-secondary').addEventListener('click', function () {
+            myModal.hide();
+        });
+
+        document.querySelector('.close').addEventListener('click', function () {
+            myModal.hide();
+        });
+    </script>
 </body>
 </html>
