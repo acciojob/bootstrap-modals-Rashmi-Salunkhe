@@ -78,7 +78,7 @@
 
    <button id="open-modal" data-bs-toggle="modal" data-bs-target="#newton-modal">Launch Newton Modal</button>
 
-    <div class="modal fade" id="newton-modal" tabindex="-1" aria-labelledby="newton-modal-label" aria-hidden="true">
+    <div class="modal fade modal" id="newton-modal" tabindex="-1" aria-labelledby="newton-modal-label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -95,11 +95,5 @@
         </div>
     </div>
 
-   <script>
-    document.getElementById('launch-newton-modal').addEventListener('click', function() {
-        var modal = new bootstrap.Modal(document.getElementById('newton-modal'));
-        modal.show();
-    });
-</script>
 </body>
 </html>
